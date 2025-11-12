@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { 
+      font-family: Arial, sans-serif;
+      background: #d8d4d4;
+      margin: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 5px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      background-color:#f98fae ;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      margin-top: 122px;
+      background-color: #f39db1;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .product-details {
+      padding: 33px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 120px;
+      line-height: 1.6;
+      color: #fff;
+    }
+
+    .product-details img { 
+      flex: 1 1 300px;
+      max-width: 200px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .info {
+      flex: 1 1 300px;
+      margin-top: 100px;
+    }
+
+    .info h1 { margin-top: 0; font-size: 2rem; }
+
+    .price { 
+      font-size: 1.5rem; 
+      font-weight: bold;
+      color: #f2bebe;
+      margin: 10px 0; 
+    }
+
+    .description {
+      color: #ddd;
+      line-height: 1.5;
+      margin-bottom: 20px; 
+    }
+
+    .cart-icon {
+      display: inline-block; 
+      padding: 12px 24px;
+      background: #007bff;
+      color: #fff; 
+      border-radius: 8px;
+      border: none;
+      cursor: pointer; 
+      margin-top: 50px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .cart-icon:hover { background: #0056b3; }
+
+    .back-link {
+      display: inline-block;
+      text-decoration: none;
+      color: hsl(211, 100%, 50%);
+      margin: 25px 33px;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Cosmetics</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav">
+      <ul>
+
+       
+        <a href="cart.html">
+          <img src="./image/icons8-add-to-cart-24.png" alt="Cart" class="cart-icon-header" />
+        </a> 
+        <span class="cat-cout" id="cart-count">0</span>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="product-details">
+      <img id="product-image" src="" alt="Product Image">
+      <div class="info">
+        <h1 id="product-name"></h1>
+        <p class="price" id="product-price"></p>
+        <p class="description" id="product-description"></p>
+        <button class="cart-icon" id="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+    <a href="index.html" class="back-link">← Back to Products</a>
+  </div>
+
+  <script>
+    // ========== PRODUCT DATA ==========
+    const products = {
+      1: { name: "Oil Cleanser", price: "$159.9", description: "Dissolves makeup, sunscreen, and impurities using nourishing oils; perfect as a first cleanse.", image: "image/istockphoto-1165853209-612x612.webp" },
+      2: { name: "Micellar Water", price: "$179.9", description: "No-rinse cleansing water that removes makeup and dirt; great for sensitive skin.", image: "image/premium_photo-1700844300861-3f1e9cae83d2.jpeg" },
+      3: { name: "Balancing Toner", price: "$149.9", description: "Combines cleansing with mild exfoliation to smooth and brighten the skin.", image: "image/valeriia-miller-_42NKYROG7g-unsplash.jpg" },
+      5: {
+        name: "Balancing Toner –",
+        price: "$120.9",
+        description: " Helps balance skin's pH after cleansing and controls excess oil.",
+        image: "image/spa-arrangement-with-cremes.jpg"
+      },
+      6: {
+        name: "Facial Mist –",
+        price: "$189.9",
+        description: "Facial Mist – Refreshing spray to hydrate and soothe skin anytime during the day.",
+        image: "image/nataliya-melnychuk-I-6Ap7JXHq8-unsplash.jpg"
+      },
+      7: {
+        name: "Hyaluronic Acid Serum – ",
+        price: "$1289.9",
+        description: "Hyaluronic Acid Serum – Deeply hydrates skin and helps retain moisture for a plump, dewy look.",
+        image: "image/alex-lvrs-mTw_GePuRUE-unsplash.jpg"
+      },
+      8: {
+        name: "Vitamin C Serum –",
+        price: "$129.19",
+        description: "Vitamin C Serum – Brightens skin tone, reduces dark spots, and boosts collagen.",
+        image: "image/alex-lvrs-mTw_GePuRUE-unsplash.jpg"
+      },
+      9: {
+        name: " Niacinamide Serum –",
+        price: "$109.99",
+        description: " Helps reduce redness, minimize pores, and control oil production.",
+        image: "image/cosmetics-composition-with-serum-bottles.jpg"
+      },
+      10: {
+        name: "Enzyme Exfoliants –",
+        price: "$129.9",
+        description: " Gentle exfoliants made from fruit enzymes to refresh sensitive or dull skin.",
+        image: "image/angelina-AM_2aeyJzKc-unsplash.jpg"
+      },
+      11: {
+        name: "Chemical Exfoliants (AHA/BHA/PHA) –",
+        price: "$289.9",
+        description: " Dissolve dead skin cells for smoother, clearer skin without scrubbing.",
+        image: "image/curology-j7pKVQrTUsM-unsplash.jpg"
+      },
+      12: {
+        name: "Pore Minimizing Serum – ",
+        price: "$89.9",
+        description: "Pore Minimizing Serum – Tightens the look of pores and smooths skin texture.",
+        image: "image/birgith-roosipuu-W71jxsXrwyQ-unsplash.jpg"
+      },
+      13: {
+        name: "Brightening Serum –",
+        price: "$209.9",
+        description: " Evens out skin tone and fades dark spots for a radiant glow.",
+        image: "image/dhaya-eddine-bentaleb-P9F7bJuy388-unsplash.jpg"
+      },
+      14: {
+        name: "Anti-aging Serum – ",
+        price: "$189.9",
+        description: "Targets wrinkles, fine lines, and loss of firmness with potent ingredients.",
+        image: "image/ela-de-pure-BKlMCsx6Lmc-unsplash.jpg"
+      },
+      15: {
+        name: "Salicylic Acid Treatment –",
+        price: "$190.99",
+        description: " Penetrates pores to clear acne and prevent future breakouts.",
+        image: "image/images (8).jpeg"
+      },
+      16: {
+        name: "Retinol / Retinoid Serum – ",
+        price: "$200.10",
+        description: "Stimulates cell turnover and smooths fine lines; great for anti-aging.",
+        image: "image/images (1).jpeg ",
+        image1: "image/alex-lvrs-mTw_GePuRUE-unsplash.jpg, "
+      }
+      // Add more if needed...
+    };
+
+    // ========== LOAD PRODUCT DETAILS ==========
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get("id");
+
+    if (products[productId]) {
+      const p = products[productId];
+      document.getElementById("product-name").textContent = p.name;
+      document.getElementById("product-price").textContent = p.price;
+      document.getElementById("product-description").textContent = p.description;
+      document.getElementById("product-image").src = p.image;
+    }
+
+    // ========== CART FUNCTIONALITY ==========
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartCountElement = document.getElementById('cart-count');
+    const addToCartBtn = document.getElementById('add-to-cart');
+
+    // Update cart count on page load
+    function updateCartCount() {
+      cartCountElement.textContent = cart.length;
+    }
+
+    updateCartCount();
+
+    // Add product to cart
+    addToCartBtn.addEventListener('click', () => {
+      if (!products[productId]) return;
+
+      const p = products[productId];
+      const item = { name: p.name, price: p.price, image: p.image };
+
+      cart.push(item);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+
+      addToCartBtn.textContent = "Added!";
+      addToCartBtn.style.background = "#28a745";
+      setTimeout(() => {
+        addToCartBtn.textContent = "Add to Cart";
+        addToCartBtn.style.background = "#007bff";
+      }, 1200);
+    });
+
+    // ========== MOBILE MENU TOGGLE ==========
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+  <script src="My-Js.JS"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

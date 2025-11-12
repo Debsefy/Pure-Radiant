@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PureRadiance</title>
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" >
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+  <div class="logo">PureRadiance</div>
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="nav">
+    <ul>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#shop">SHOP</a></li>
+      <li><a href="#testimonies">TESTIMONIES</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li>
+        <a href="cart.html">
+          <img loading="lazy" src="./image/icons8-add-to-cart-24.png" alt="Cart" class="cart-icon-header" />
+          <span id="cart-count">0</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<section id="home" class="hero">
+  <div class="hero-text">
+      <small>A WHOLE NEW LOOK</small>
+      <h1>BEAUTY<br>PRONOUNCED</h1>
+      <p>OUR PRODUCT ARE CRAFTED WITH THE BEST QUALITY IF YOU JUST START YOUR SKIN CARE ROUTINE OR REFINE WE ARE THE BEST SPOT TO PICK</p>
+      <a href="#about"><button>Learn More</button></a>
+  </div>
+</section>
+
+<section class="trust-section">
+  <div class="trust">
+    <img loading="lazy" src="./image/icons8-menu-30 (1).png" alt="">
+    <h4>SEASON SALE</h4>
+    <p>we have the latest style in <br>section at our outstand        
+  </div>
+
+  <div class="trust">
+    <img loading="lazy" src="./image/icons8-menu-30 (1).png" alt="">
+    <h4>FREE SHIPPING</h4>
+    <p>we offer free shipping on <br>all orders,with no hidden fees</p>
+  </div>
+
+  <div class="trust">
+    <img loading="lazy" src="./image/icons8-menu-30 (1).png" alt="">
+    <h4>7 DAYS GURANTEE</h4>
+    <p>7 days for full return <br>if not saticfied</p>
+  </div>
+
+</section>
+
+
+<section id="shop" class="main-section"> 
+  <div class="main-text">
+    <h4>A brush of perfection</h4>
+    <h2>ADD A FLAVOUR FOR BEING A GIRL</h2>
+    
+  </div>
+
+  <!-- ✅ Filter Buttons -->
+  <div class="filter-buttons">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('oil')">Oil</button>
+    <button onclick="filterProducts('scub')">Scrub</button>
+    <button onclick="filterProducts('Balm')">Balm</button>
+  </div>
+
+  <div class="product-content">
+
+    
+    
+    
+
+    <div class="product" data-category="scub">
+      <div class="product-image-container">
+        <img loading="lazy" src="image/alex-lvrs-mTw_GePuRUE-unsplash.jpg" alt="Cozy Smart Gown" class="product-image" />
+        <div class="overlay">
+          <img loading="lazy" class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+          <a href="about.html?id=8">
+            <button class="chat-btn">View</button>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Vitamin C Serum</h3>
+        <p class="product-price">$189.9</p>
+      </div>
+    </div>
+
+    <div class="product" data-category="scub">
+      <div class="product-image-container">
+        <img loading="lazy" src="image/cosmetics-composition-with-serum-bottles.jpg" alt="Cozy Smart Gown" class="product-image" />
+        <div class="overlay">
+          <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+          <a href="about.html?id=9">
+            <button class="chat-btn">View</button>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Exfoliating Cleanser</h3>
+        <p class="product-price">$189.99</p>
+      </div>
+    </div>
+
+    <div class="product" data-category="scub">
+      <div class="product-image-container">
+        <img loading="lazy" src="image/angelina-AM_2aeyJzKc-unsplash.jpg" alt="Cozy Smart Gown" class="product-image" />
+        <div class="overlay">
+          <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+          <a href="about.html?id=10">
+            <button class="chat-btn">View</button>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Enzyme Exfoliants</h3>
+        <p class="product-price">$129.9</p>
+      </div>
+    </div>
+
+    <div class="product" data-category="scub">
+      <div class="product-image-container">
+        <img loading="lazy" src="image/curology-j7pKVQrTUsM-unsplash.jpg" alt="Cozy Smart Gown" class="product-image" />
+        <div class="overlay">
+          <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+          <a href="about.html?id=11">
+            <button class="chat-btn">View</button>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Chemical Exfoliants (AHA/BHA/PHA)</h3>
+        <p class="product-price">$289.9</p>
+      </div>
+    </div>
+
+     
+    <div class="product" data-category="oil">
+      <div class="product-image-container">
+        <img loading="lazy" src="image/birgith-roosipuu-W71jxsXrwyQ-unsplash.jpg" alt="Cozy Smart Gown" class="product-image" />
+        <div class="overlay">
+          <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+          <a href="about.html?id=12">
+            <button class="chat-btn">View</button>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Pore Minimizing Serum</h3>
+        <p class="product-price">$89.9</p>
+      </div>
+    </div>
+
+    <div class="product" data-category="oil">
+      <div class="product-image-container">
+        <img loading="lazy" src="image/dhaya-eddine-bentaleb-P9F7bJuy388-unsplash.jpg" alt="Cozy Smart Gown" class="product-image" />
+        <div class="overlay">
+          <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+          <a href="about.html?id=13">
+            <button class="chat-btn">View</button>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Brightening Serum </h3>
+        <p class="product-price">$209.9</p>
+      </div>
+    </div>
+
+    <div class="product" data-category="oil">
+      <div class="product-image-container">
+        <img loading="lazy" src="image/ela-de-pure-BKlMCsx6Lmc-unsplash.jpg" alt="Cozy Smart Gown" class="product-image" />
+        <div class="overlay">
+          <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+          <a href="about.html?id=14">
+            <button class="chat-btn">View</button>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Anti-aging Serum</h3>
+        <p class="product-price">$189.9</p>
+      </div>
+    </div>
+
+    <div class="product" data-category="oil">
+      <div class="product-image-container">
+        <img loading="lazy" src="image/images (8).jpeg" alt="Cozy Smart Gown" class="product-image" />
+        <div class="overlay">
+          <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+          <a href="about.html?id=15">
+            <button class="chat-btn">View</button>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Salicylic Acid Treatment</h3>
+        <p class="product-price">$190.99</p>
+      </div>
+    </div>
+
+     
+    <div class="product" data-category="Balm">
+      <div class="product-image-container">
+        <img loading="lazy" src="image/images (1).jpeg" alt="Cozy Smart Gown" class="product-image" />
+        <div class="overlay">
+          <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+           <a href="about.html?id=16">
+            <button class="chat-btn">View</button>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Retinol / Retinoid Serum</h3>
+        <p class="product-price">$200.10</p>
+      </div>
+    </div>
+
+    <div class="product" data-category="Balm">
+      <div class="product-image-container">
+        <img loading="lazy" src="image/istockphoto-1165853209-612x612.webp" alt="Cozy Smart Gown" class="product-image" />
+        <div class="overlay">
+          <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+          <a href="about.html?id=1">
+            <button class="chat-btn">View</button>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Oil Cleanser</h3>
+        <p class="product-price">$159.9</p>
+      </div>
+    </div>
+
+    <div class="product" data-category="Balm">
+      <div class="product-image-container">
+        <img loading="lazy" src="image/premium_photo-1700844300861-3f1e9cae83d2.jpeg" alt="Cozy Smart Gown" class="product-image" />
+        <div class="overlay">
+          <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+          <a href="about.html?id=2">
+            <button class="chat-btn">View</button>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Micellar Water</h3>
+        <p class="product-price">$179.9</p>
+      </div>
+    </div>
+
+    <div class="product" data-category="Balm">
+      <div class="product-image-container">
+        <img loading="lazy" src="image/valeriia-miller-_42NKYROG7g-unsplash.jpg" alt="Cozy Smart Gown" class="product-image" />
+        <div class="overlay">
+          <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+          <a href="about.html?id=3">
+            <button class="chat-btn">View</button>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Balancing Toner</h3>
+        <p class="product-price">$149.9</p>
+      </div>
+    </div>
+
+    
+    <div class="product" data-category="scub">
+      <div class="product-image-container">
+        <img loading="lazy" src="image/spa-arrangement-with-cremes.jpg" alt="Cozy Smart Gown" class="product-image" />
+        <div class="overlay">
+          <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+          <a href="about.html?id=5">
+            <button class="chat-btn">View</button>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Balancing Toner</h3>
+        <p class="product-price">$120.9</p>
+      </div>
+    </div>
+
+     
+    <div class="product" data-category="scub">
+      <div class="product-image-container">
+        <img loading="lazy" src="image/nataliya-melnychuk-I-6Ap7JXHq8-unsplash.jpg" alt="Cozy Smart Gown" class="product-image" />
+        <div class="overlay">
+          <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+          <a href="about.html?id=6">
+            <button class="chat-btn">View</button>
+          </a>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Facial Mist</h3>
+        <p class="product-price">$189.9</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="main-section2">
+  <div class="the-product">
+    <img loading="lazy" src="./image/laura-jaeger-7LAbLSKbkaQ-unsplash.jpg" alt="banner-image">
+  </div>
+
+  <div class="the-text">
+    <h4>BE BOLD, BE GOOD</h4>
+   <h2>A WHOLE NEW LOOK</h2>
+   <p>get your whole new look from our proffetionwem <br> dservicebjjf rttyuu gfvd</p>
+   <a id="#shop" href="#"> <button>Shop More</button></a>
+   </div>
+</section>
+
+
+
+<section id="shop" class="main-section">
+  <div class="main-text">
+         <h2>ADD A FLAVOUR FOR BEING A GIRL</h2>
+         <p>GET THE BEST QUALITY</p>
+        </div>
+
+<div class="product-content">
+  <div class="product">
+    <div class="product-image-container">
+      <img loading="lazy" src="image/alex-lvrs-mTw_GePuRUE-unsplash.jpg" alt="Cozy Smart Gown" class="product-image" />
+      <div class="overlay">
+        <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+        <a href="about.html?id=">
+          <button class="chat-btn">View</button>
+        </a>
+      </div>
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Hyaluronic Acid Serum</h3>
+      <p class="product-price">$129.9</p>
+    </div>
+  </div>
+
+
+  <div class="product">
+    <div class="product-image-container">
+      <img loading="lazy" src="image/alex-lvrs-mTw_GePuRUE-unsplash.jpg" alt="Cozy Smart Gown" class="product-image" />
+      <div class="overlay">
+        <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+        <a href="about.html?id=8">
+          <button class="chat-btn">View</button>
+        </a>
+      </div>
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Vitamin C Serum</h3>
+      <p class="product-price">$129.19</p>
+    </div>
+  </div>
+
+  <div class="product">
+    <div class="product-image-container">
+      <img loading="lazy" src="image/cosmetics-composition-with-serum-bottles.jpg" alt="Cozy Smart Gown" class="product-image" />
+      <div class="overlay">
+        <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+        <a href="about.html?id=9">
+          <button class="chat-btn">View</button>
+        </a>
+      </div>
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Niacinamide Serum</h3>
+      <p class="product-price">$109.99</p>
+    </div>
+  </div>
+
+  <div class="product" >
+    <div class="product-image-container">
+      <img loading="lazy" src="image/angelina-AM_2aeyJzKc-unsplash.jpg" alt="Cozy Smart Gown" class="product-image" />
+      <div class="overlay">
+        <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+        <a href="about.html?id=10">
+          <button class="chat-btn">View</button>
+        </a>
+      </div>
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Enzyme Exfoliants </h3>
+      <p class="product-price">$189.99</p>
+    </div>
+  </div>
+
+   
+  <div class="product">
+    <div class="product-image-container">
+      <img loading="lazy" src="image/curology-j7pKVQrTUsM-unsplash.jpg" alt="Cozy Smart Gown" class="product-image" />
+      <div class="overlay">
+        <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+        <a href="about.html?id=11">
+          <button class="chat-btn">View</button>
+        </a>
+      </div>
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Chemical Exfoliants (AHA/BHA/PHA)</h3>
+      <p class="product-price">$189.99</p>
+    </div>
+  </div>
+
+  <div class="product" >
+    <div class="product-image-container">
+      <img loading="lazy" src="image/birgith-roosipuu-W71jxsXrwyQ-unsplash.jpg" alt="Cozy Smart Gown" class="product-image" />
+      <div class="overlay">
+        <img class="cart-icon" src="./image/icons8-add-to-cart-24.png" alt="">
+        <a href="about.html?id=12">
+          <button class="chat-btn">View</button>
+        </a>
+      </div>
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Pore Minimizing Serum </h3>
+      <p class="product-price">$189.99</p>
+    </div>
+  </div>
+
+  <div class="product" >
+    <div class="product-image-container">
+      <img loading="lazy" src="./image/images (3).jpeg" alt="Cozy Smart Gown" class="product-image" />
+      <div class="overlay">
+        <img class="cart-icon" src="image/dhaya-eddine-bentaleb-P9F7bJuy388-unsplash.jpg" alt="">
+        <a href="about.html?id=7">
+          <button class="chat-btn">View</button>
+        </a>
+      </div>
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Brightening Serum –",</h3>
+      <p class="product-price">$209.9</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section id="testimonies" class="testimonials">
+  <h2>What Our Customers Say</h2>
+
+  <div class="testimonial-slider">
+    <div class="testimonial-card active">
+      <p class="testimonial-text">
+        "I’ve been using the rose oil for 3 months now and my skin has never felt better! The glow is amazing."
+      </p>
+      <div class="testimonial-author">
+        <img loading="lazy" src="./image/ela-de-pure-BKlMCsx6Lmc-unsplash.jpg" alt="Customer" />
+        <div>
+          <h4>Sarah Johnson</h4>
+          <span>Skin Care Enthusiast</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        "The scrub is gentle yet effective. I love how smooth my skin feels after every use."
+      </p>
+      <div class="testimonial-author">
+        <img loading="lazy" src="./image/laura-jaeger-LKhUGHA0z54-unsplash.jpg" alt="Customer" />
+        <div>
+          <h4>Emily Carter</h4>
+          <span>Beauty Blogger</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        "Fast delivery and great packaging. Definitely my favorite skincare brand now!"
+      </p>
+      <div class="testimonial-author">
+        <img loading="lazy" src="./image/laura-jaeger-PzxSdc2a-1A-unsplash.jpg" alt="Customer" />
+        <div>
+          <h4>Amanda Lee</h4>
+          <span>Regular Customer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Navigation dots -->
+  <div class="dots"></div>
+</section>
+
+
+ <!-- About Hero -->
+<div id="about" class="about-header">
+  <h1>About Us</h1>
+  <p>Discover the story behind our skincare journey</p>
+</div>
+
+<!-- About Content -->
+<section class="about-section">
+  <img loading="lazy" src="./image/images (9).jpeg" alt="Our Team">
+  <div class="about-text">
+    <h2>Who We Are</h2>
+    <p>
+      At <strong>PureRadiance</strong>, we believe that skincare should be simple, natural, and effective. 
+      Our mission is to create products that nourish your skin with safe ingredients while 
+      promoting long-term health and beauty.
+    </p>
+    <p>
+      Since our launch, we’ve been dedicated to empowering individuals to embrace their natural glow. 
+      Every product we create is carefully formulated with love, ensuring your skin feels as good as it looks.
+    </p>
+  </div>
+</section>
+
+<!-- Meet Our Team -->
+<section class="team-section">
+<h2>Meet Our Experts</h2>
+<p>Our dedicated skincare specialists and wellness experts who make the magic happen ✨</p>
+
+<div class="team-container">
+  <div class="team-member">
+    <img loading="lazy" src="image/premium_photo-1679750867225-a096b968baf4.jpeg" alt="Founder">
+    <h3>Sophia Johnson</h3>
+    <p class="role">Founder & CEO</p>
+    <p>Passionate about natural skincare, Sophia started GlowSkin to help people embrace their beauty confidently.</p>
+  </div>
+
+  <div class="team-member">
+    <img loading="lazy" src="image/photo-1653256335096-4ba521fbde52.jpeg">
+    <h3>Dr. Emily Carter</h3>
+    <p class="role">Chief Dermatologist</p>
+    <p>With 12+ years of experience, Emily ensures all our products are safe, effective, and dermatologist-approved.</p>
+  </div>
+
+  <div class="team-member">
+    <img loading="lazy" src="image/photo-1645647445675-fc96e0e8f846.jpeg" alt="Product Designer">
+    <h3>Olivia Martinez</h3>
+    <p class="role">Product Designer</p>
+    <p>Olivia creates innovative skincare formulas that blend nature and science to give your skin the best care.</p>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+<!-- 
+
+footer -->
+<footer class="footer">
+
+<!-- Newsletter Section -->
+<div class="newsletter">
+  <h3>Subscribe on our newsletter</h3>
+  <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+  <div class="newsletter-input">
+    <input type="email" placeholder="Email" />
+    <button>Subscribe</button>
+  </div>
+</div>
+
+
+<!-- Footer Links -->
+<div class="footer-content">
+  <!-- Brand Info -->
+
+
+  <!-- Links -->
+  <div class="footer-column">
+    <h5>CANTACT DETAILS</h5>
+    <li>📧olouewan@ggfrjj</li>
+    <li>🗺 123 fift avenu</li>
+    <li>📞091569566</li>
+    <li>Blogs</li>
+  </div>
+
+  <div class="footer-column">
+  
+    <h4 class="logo">PureRadiance</h4>
+  
+  </div>
+
+  <div class="footer-column">
+    <h5>Information</h5>
+    <a href="#">Help Center</a>
+    <a href="#">Money Refund</a>
+    <a href="#">Shipping</a>
+    <a href="#">Contact us</a>
+  </div>
+
+ 
+
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="my-js.js"></script>
+</body>
+</html>
