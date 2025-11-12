@@ -1,4 +1,4 @@
-
+  // this is the togglebar
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.querySelector('nav ul');
 
@@ -7,7 +7,7 @@
   });
 
   
-  // this is the togglebar
+
 
 
 // This is for the filtering section
@@ -140,30 +140,4 @@ productCartIcons.forEach(icon => {
 function updateCartCount() {
   cartCountElement.textContent = cart.length;
 }
-
-
-// ==================== SEARCH FUNCTIONALITY ====================
-
-const searchInput = document.getElementById("product-search");
-const searchBtn = document.getElementById("search-btn");
-const products = document.querySelectorAll(".product");  
-
-function searchProducts() {
-  const searchTerm = searchInput.value.toLowerCase().trim();
-
-  products.forEach(product => {
-    const productName = product.querySelector(".product-name").textContent.toLowerCase();
-    if (productName.includes(searchTerm)) {
-      product.style.display = "block";
-    } else {
-      product.style.display = "none";
-    }
-  });
-}
-
-// Event listeners
-searchBtn.addEventListener("click", searchProducts);
-searchInput.addEventListener("keyup", (e) => {
-  if (e.key === "Enter") searchProducts();
-});
 
