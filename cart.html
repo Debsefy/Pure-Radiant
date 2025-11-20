@@ -4,17 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Cart | PureRadiance</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 
   <style>
-    /* 🛍 Cart Page Styling */
-header{
-  background-color:#f98fae ;
-}
-    .cat-cout{
-  position: relative;
- bottom: 12px;
-}
 
     .cart-page {
       max-width: 900px;
@@ -130,20 +122,99 @@ header{
     .checkout-btn:hover { background: #0056b3; }
 
     header, footer { width: 100%; }
+
+    @media screen and (max-width: 550px) {
+            header {
+                font-size: 22px;
+                padding: 12px 0;
+            }
+
+            .payment-container {
+                padding: 25px 18px;
+                margin: 25px auto;
+            }
+
+            .payment-container h2 {
+                font-size: 22px;
+            }
+
+            .payment-container p {
+                font-size: 16px;
+            }
+            .remove-btn{
+              padding: 2px 4px;
+            }
+            .cart-item-info h3 {
+      font-size: 15px;
+        }
+
+    .cart-item-info p {
+      font-size: 10px;
+       }
+
+            footer {
+                font-size: 12px;
+                padding: 15px;
+            }
+        }
+
+        /* ===== VERY SMALL SCREEN (older phones) ===== */
+        @media screen and (max-width: 360px) {
+            .payment-container {
+                padding: 20px 15px;
+            }
+
+            .payment-container h2 {
+                font-size: 20px;
+            }
+
+            .payment-container p {
+                font-size: 15px;
+            }
+
+            header {
+                font-size: 20px;
+            }
+            .remove-btn{
+              padding: 2px 4px;
+            }
+            .cart-item-info h3 {
+      font-size: 15px;
+        }
+
+    .cart-item-info p {
+      font-size: 10px;
+       }
+        }
   </style>
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <div class="logo">PureRadiance</div>
-   
-    <nav id="nav">
-                 <img src="./image/icons8-add-to-cart-24.png" alt="Cart" class="cart-icon-header" />
+ 
+<header>
+  <div class="logo">PureRadiance</div>
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="index.html">SHOP</a></li>
+      <li><a href="index.html">TESTIMONIES</a></li>
+      <li><a href="index.html">ABOUT</a></li>
+      <li>
+        <a href="cart.html">
+          <img loading="lazy" src="./image/icons8-add-to-cart-24.png" alt="Cart" class="cart-icon-header" />
+          <span id="cart-count">0</span>
         </a>
-        <span class="cat-cout" id="cart-count">0</span>
-      </ul>
-    </nav>
-  </header>
+      </li>
+    </ul>
+  </nav>
+</header>
+
 
   <!-- 🛒 Cart Section -->
   <section class="cart-page">
@@ -276,16 +347,18 @@ header{
 
     displayCart();
 
-    // Mobile menu toggle
-    const toggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("nav");
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
 
+      // this is the togglebar
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.querySelector('nav ul');
 
-    });
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  
   </script>
 
-  <script src="My-Js.JS"></script>
+
 </body>
 </html>

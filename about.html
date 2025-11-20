@@ -92,24 +92,46 @@
     }
 
     .back-link:hover { text-decoration: underline; }
+    @media screen and (max-width: 550px){
+      .product-details {
+        gap: 1px;
+       }
+
+    @media screen and (max-width: 360px){
+      .product-details {
+         flex-wrap: wrap;
+      gap: 1px;
+       }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo">Cosmetics</div>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-    <nav id="nav">
-      <ul>
+ 
+<header>
+  <div class="logo">PureRadiance</div>
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-       
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="index.html">SHOP</a></li>
+      <li><a href="index.html">TESTIMONIES</a></li>
+      <li><a href="index.html">ABOUT</a></li>
+      <li>
         <a href="cart.html">
-          <img src="./image/icons8-add-to-cart-24.png" alt="Cart" class="cart-icon-header" />
-        </a> 
-        <span class="cat-cout" id="cart-count">0</span>
-      </ul>
-    </nav>
-  </header>
+          <img loading="lazy" src="./image/icons8-add-to-cart-24.png" alt="Cart" class="cart-icon-header" />
+          <span id="cart-count">0</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
 
   <div class="container">
     <div class="product-details">
@@ -248,15 +270,17 @@
         addToCartBtn.style.background = "#007bff";
       }, 1200);
     });
+  // this is the togglebar
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.querySelector('nav ul');
 
-    // ========== MOBILE MENU TOGGLE ==========
-    const toggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("nav");
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  
   </script>
-  <script src="My-Js.JS"></script>
+ 
 </body>
 </html>
 
