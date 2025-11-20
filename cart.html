@@ -266,10 +266,13 @@ header{
       displayCart();
     });
 
+    
     checkoutBtn.addEventListener('click', () => {
-      alert('Proceeding to checkout...');
-      
-    });
+  localStorage.setItem("checkout_total", totalEl.textContent); 
+  window.location.href = "payment.html";
+});
+
+
 
     displayCart();
 

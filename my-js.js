@@ -109,11 +109,14 @@ filterProducts('all');
 // Keep cart data in localStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Select elements
+// Select  jtytggg     6tjvn gg elementsyuygyfffk 
+
+
 const cartCountElement = document.getElementById('cart-count');
 const productCartIcons = document.querySelectorAll('.product .cart-icon');
 
-// Update cart count when the page loads
+// Update cart count when 
+
 updateCartCount();
 
 // Add click events to every cart icon
